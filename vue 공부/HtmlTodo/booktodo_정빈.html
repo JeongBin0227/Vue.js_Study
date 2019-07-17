@@ -60,15 +60,18 @@
         <br>
 
         <div class="inputBox">
-            <input class="name" type="text" placeholder="name ..."v-model="name">
-            <input class="item" type="text" placeholder="type anything welcomed ..."v-model="newTodoItem">
-            <button v-on:click="add_todo()">ADD</button>
+            <ul>
+                <input class ="name" type="text" placeholder="이름">
+                <input class ="item" type="text" placeholder="내용">
+                <button v-on:click = "" >add</button>
+            </ul>
         </div>
     
         <ul class="todoList">
-            <li v-for="(todo, index ) in todoItems">
-                <span> {{todo.name}}::{{todo.item}}</span>
-                <span class="removeBtn" v-on:click="remove_todo(index)">&#x00D7</span>
+            <li v-for="(todo, index) in todoItems">
+                <span>{{todo.name}}::{{todo.item}}</span>
+                <button class="removeBtn" v-on:click="">delete</button>
+
             </li>
         </ul>
 
